@@ -10,7 +10,7 @@ const iMieiDati = reactive({
             release: `8/10/2004`,
             category: `coming soon`,
             views: `100`,
-            video: ``,
+            video: `https://www.youtube.com/embed/kA9vtXbbhVs?si=o_trfc2FRwv2nmfr`,
             rating: `6`,
             duration: `2h 2m`
         },
@@ -23,7 +23,7 @@ const iMieiDati = reactive({
             release: `15/1/2023`,
             category: `tv series`,
             views: `200`,
-            video: ``,
+            video: `https://www.youtube.com/embed/uLtkt8BonwM?si=WyPLiN9sH5__6bgm`,
             rating: `8`,
             duration: `1h 30m`
         },
@@ -36,7 +36,7 @@ const iMieiDati = reactive({
             release: `22/12/1995`,
             category: `top rating`,
             views: `300`,
-            video: ``,
+            video: `https://www.youtube.com/embed/HJwvbmRXym4?si=ejLvHZr355VUkdcN`,
             rating: `7`,
             duration: `1h 18m`
         },
@@ -49,7 +49,7 @@ const iMieiDati = reactive({
             release: `1/1/2015`,
             category: `latest movie`,
             views: `400`,
-            video: ``,
+            video: `https://www.youtube.com/embed/99k3u9ay1gs?si=EY22hjKIbLT5IPvB`,
             rating: `7`,
             duration: `2h 12m`
         },
@@ -62,7 +62,7 @@ const iMieiDati = reactive({
             release: `11/6/2021`,
             category: `coming soon`,
             views: `500`,
-            video: ``,
+            video: `https://www.youtube.com/embed/k5Fn99wmFCQ?si=zEDQ8qM1T8Ypfzp_`,
             rating: `5`,
             duration: `1h 48m`
         },
@@ -75,7 +75,7 @@ const iMieiDati = reactive({
             release: `24/10/2003`,
             category: `top rating`,
             views: `600`,
-            video: ``,
+            video: `https://www.youtube.com/embed/7kSuas6mRpk?si=8kZhq9V25Ub9pL60`,
             rating: `8`,
             duration: `1h 51m`
         },
@@ -88,7 +88,7 @@ const iMieiDati = reactive({
             release: `26/10/2014`,
             category: `top rating`,
             views: `700`,
-            video: ``,
+            video: `https://www.youtube.com/embed/zSWdZVtXT7E?si=NZnpnLdmq385S-px`,
             rating: `9`,
             duration: `2h 49m`
         },
@@ -101,7 +101,7 @@ const iMieiDati = reactive({
             release: `6/6/1976`,
             category: `coming soon`,
             views: `800`,
-            video: ``,
+            video: `https://www.youtube.com/embed/sS-sXcx30O4?si=wjFyymamTAiW8qk5`,
             rating: `4`,
             duration: `1h 57m`
         },
@@ -114,7 +114,7 @@ const iMieiDati = reactive({
             release: `27/10/2006`,
             category: `latest movie`,
             views: `900`,
-            video: ``,
+            video: `https://www.youtube.com/embed/76K0UGvkqYU?si=dpkb9njLrRo08W-n`,
             rating: `5`,
             duration: `1h 48m`
         }
@@ -150,7 +150,9 @@ const iMieiDati = reactive({
             date: `14/04/2024`,
             img: `news-5.jpg`
         },
-    ]
+    ],
+    
+    
 	
 });
 
