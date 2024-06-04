@@ -51,7 +51,8 @@ export default {
                 <div>Plying 24</div>
             </div>
             <div class="pl-bg p-3 d-flex flex-column overflow-y-auto">
-                <div class="mb-4 d-flex w-100 my-hov-pl" @click="this.videoAttivo = i" v-for="film, i in store.films">
+                <div class="mb-4 d-flex w-100 my-hov-pl pe-2" @click="this.videoAttivo = i"
+                    v-for="film, i in store.films">
                     <img class="my-width-pl" :src="getImage(film.img_sq)" alt="">
                     <div class="ms-3 w-100">
                         <div class="fw-bold fs-5 mb-1">{{ film.title }}</div>
@@ -90,9 +91,11 @@ export default {
     max-height: 570px;
 }
 
-.my-hov-pv:hover {
-    background-color: grey;
+.my-hov-pl:hover {
+    background-color: gray;
+
 }
+
 
 .pl-bg {
     background-color: #182028;

@@ -4,7 +4,7 @@ const iMieiDati = reactive({
 	films: [
         {
             title: `Hellboy`,
-            genre: [`Action`, `Drama`, `Superheroes` ],
+            genre: [`Action`, `Drama` ],
             img_rec: `1-rec.jpg`,
             img_sq: `1-sq.jpg`,
             release: `8/10/2004`,
