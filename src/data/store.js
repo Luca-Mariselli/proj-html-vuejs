@@ -12,7 +12,7 @@ const iMieiDati = reactive({
             views: `100`,
             video: ``,
             rating: `6`,
-            
+            duration: `2h 2m`
         },
 
         {
@@ -25,7 +25,7 @@ const iMieiDati = reactive({
             views: `200`,
             video: ``,
             rating: `8`,
-            
+            duration: `1h 30m`
         },
 
         {
@@ -38,7 +38,7 @@ const iMieiDati = reactive({
             views: `300`,
             video: ``,
             rating: `7`,
-            
+            duration: `1h 18m`
         },
 
         {
@@ -51,7 +51,7 @@ const iMieiDati = reactive({
             views: `400`,
             video: ``,
             rating: `7`,
-            
+            duration: `2h 12m`
         },
 
         {
@@ -64,7 +64,7 @@ const iMieiDati = reactive({
             views: `500`,
             video: ``,
             rating: `5`,
-            
+            duration: `1h 48m`
         },
 
         {
@@ -77,7 +77,7 @@ const iMieiDati = reactive({
             views: `600`,
             video: ``,
             rating: `8`,
-            
+            duration: `1h 51m`
         },
 
         {
@@ -90,7 +90,7 @@ const iMieiDati = reactive({
             views: `700`,
             video: ``,
             rating: `9`,
-            
+            duration: `2h 49m`
         },
 
         {
@@ -103,7 +103,7 @@ const iMieiDati = reactive({
             views: `800`,
             video: ``,
             rating: `4`,
-            
+            duration: `1h 57m`
         },
 
         {
@@ -116,7 +116,7 @@ const iMieiDati = reactive({
             views: `900`,
             video: ``,
             rating: `5`,
-            
+            duration: `1h 48m`
         }
     ],
 

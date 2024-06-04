@@ -15,9 +15,7 @@ export default {
     }
   },
   methods: {
-    getImage(percorso) {
-      return new URL(`./assets/img/${percorso}`, import.meta.url)
-    }
+
   },
   mounted() {
     console.log(this.store.films[0].title)
