@@ -1,11 +1,17 @@
 <script>
 import store from '../data/store.js';
+import Jumbo from './Jumbo.vue';
 import MoviePlaylist from './MoviePlaylist.vue';
+import JumboComing from './JumboComing.vue';
+import AppSubscribe from './AppSubscribe.vue';
 
 
 export default {
     components: {
         MoviePlaylist,
+        Jumbo,
+        JumboComing,
+        AppSubscribe,
 
     },
     data() {
@@ -25,9 +31,14 @@ export default {
 
 
     <main>
-        <div class="container mt-3">
-            <MoviePlaylist />
-        </div>
+        <Jumbo />
+
+        <MoviePlaylist />
+
+        <JumboComing />
+
+        <AppSubscribe />
+
     </main>
 
 

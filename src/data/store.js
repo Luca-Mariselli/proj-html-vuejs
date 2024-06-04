@@ -151,6 +151,126 @@ const iMieiDati = reactive({
             img: `news-5.jpg`
         },
     ],
+
+    headerLinks: [
+        {
+            titolo: "Home",
+            link: [
+                "Home",
+                "Home1",
+                "Home2",
+                "Home3",
+                "Home4",
+                "Home5",
+                "Home6",
+            ]
+        },
+        {
+            titolo: "Celebrity",
+            link: [
+                "Celebrity Single",
+                "Celebrity",
+            ]
+        },
+        {
+            titolo: "Movie",
+            link: [
+                "Movie Post",
+                "Top Rate Movie",
+                "Movie Category",
+                "Single Movie",
+            ]
+        },
+        {
+            titolo: "Page",
+            link: [
+                "Princing Table",
+                "Call to Action",
+                "My Account",
+                "Cart",
+                "Checkout",
+                "Wishlist",
+            ]
+        },
+        {
+            titolo: "Shop",
+            link: [
+                {
+                    titolo: "Shop Sidebar",
+                    link: [
+                        "Grid View",
+                        "List View"
+                    ],
+                },
+
+                {
+                    titolo: "No Sidebar",
+                    link: [
+                        "Grid View",
+                        "List View"
+                    ],
+                }
+
+            ]
+        },
+    ],
+
+    searchLinks: [
+        "All Movie Category",
+        "Coming Soon",
+        "Latest Movie",
+        "Top Rating",
+        "Tv Series",
+    ],
+
+    footerLinks: [
+        {
+            titolo: "About Us",
+            description: "Mauris malesuada arcu eu posuere eleifen. Ut egestas tortor at leo egestas tincidunt. Nam tincidunt metus tristique tristique viverra. Mauris erat ante, egestas vitae dapibus seds.",
+        },
+        {
+            titolo: "Movie Category",
+            links: [
+                "English New Movie",
+                "Hindi All Movie",
+                "Latest Tamil Movie",
+                "New Top Rating Movie",
+                "Hornn New Movie",
+                "Animation New Movie",
+            ]
+        },
+        {
+            titolo: "Information",
+            links: [
+                "Youtube Video Post",
+                "Actor Information",
+                "New Promotion",
+                "Latest Movie In English",
+                "Latest Film Product",
+                "Video New Video"
+            ]
+        },
+        {
+            titolo: "Recent Posts",
+            recent: [
+                {
+                    name: "Actor The Concept Movie High Concept Theory see",
+                    date: "April 14, 2020",
+                    img_link: "../assets/img/9-rec.jpg",
+                },
+                {
+                    name: "consequat Nam lectus nibh aucibus It has turpis",
+                    date: "April 14, 2020",
+                    img_link: "",
+                },
+                {
+                    name: "Nam lectus nibh consequat aucibus turpis",
+                    date: "April 14, 2020",
+                    img_link: "",
+                },
+            ]
+        }
+    ]
     
     
 	
