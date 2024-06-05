@@ -30,13 +30,13 @@ export default {
 </script>
 
 <template>
-    <div class="container mt-3">
+    <div class="container mt-3 ">
         <div class="my-movie-pl p-1">
             <h3 class="ms-2">Movie Playlist</h3>
             <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
         </div>
 
-        <div class="d-flex">
+        <div class="d-flex mb-5">
             <div class="my-col-pl-left">
                 <div>
                     <iframe width="860" height="570" :src="store.films[videoAttivo].video" title="YouTube video player"

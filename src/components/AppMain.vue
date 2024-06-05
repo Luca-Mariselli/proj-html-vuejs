@@ -5,6 +5,7 @@ import MoviePlaylist from './MoviePlaylist.vue';
 import JumboComing from './JumboComing.vue';
 import AppSubscribe from './AppSubscribe.vue';
 import MovieCategories from './MovieCategories.vue';
+import AppNewMovieCarousel from './AppNewMovieCarousel.vue';
 
 
 export default {
@@ -14,6 +15,7 @@ export default {
         JumboComing,
         MovieCategories,
         AppSubscribe,
+        AppNewMovieCarousel,
 
     },
     data() {
@@ -34,6 +36,8 @@ export default {
 
     <main>
         <Jumbo />
+
+        <AppNewMovieCarousel />
 
         <MoviePlaylist />
 

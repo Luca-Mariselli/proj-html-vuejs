@@ -34,7 +34,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative my-fs" @mouseover="showButton()" @mouseleave="hideButton()">
+    <div class="position-relative my-fs mb-5" @mouseover="showButton()" @mouseleave="hideButton()">
         <figure class="m-0 p-0">
             <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-show="this.imgActive == 0">
             <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-show="this.imgActive == 1">
