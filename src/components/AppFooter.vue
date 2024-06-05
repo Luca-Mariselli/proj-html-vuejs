@@ -16,7 +16,9 @@ export default {
     },
 
     methods: {
-      
+        getImage(percorso) {
+            return new URL(`../assets/img/${percorso}`, import.meta.url)
+        },
     },
 
     mounted() {
@@ -27,87 +29,101 @@ export default {
 </script>
 
 <template>
-<!-- <div v-for="element in store.movies">
+    <!-- <div v-for="element in store.movies">
     <ul>
         <li v-for="links in element.links">{{ links }}</li>
     </ul>
 
 </div> -->
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-3">
-                <h4>{{ store.footerLinks[0].titolo }}</h4>
-                <p>{{ store.footerLinks[0].description }}</p>
-                <div class="d-flex mt-4">
-                    <div class="circle" style="background-color: #02b0e8;">
-                        <a class="m-0" href=""><i class="fa-brands fa-facebook-f"></i></a>
-                    </div>
-                    <div class="circle" style="background-color: #02b0e8;">
-                        <a class="m-0" href=""><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                    <div class="circle" style="background-color: aqua;">
-                        <a class="m-0" href=""><i class="fa-brands fa-linkedin-in"></i></a>
-                    </div>
-                    <div class="circle" style="background-color: orangered;">
-                        <a class="m-0" href=""><i class="fa-brands fa-instagram"></i></a>
-                    </div>
-                    <div class="circle" style="background-color: crimson;">
-                        <a class="m-0" href=""><i class="fa-brands fa-pinterest"></i></a>
-                    </div>
+    <!-- FOOTER -->
+    <footer class="grayscale">
+        <div class="container">
+            <div class="row">
+                <div class="col-3">
+                    <h4>{{ store.footerLinks[0].titolo }}</h4>
+                    <p>{{ store.footerLinks[0].description }}</p>
+                    <div class="d-flex mt-4">
+                        <div class="circle" style="background-color: #02b0e8;">
+                            <a class="m-0" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        </div>
+                        <div class="circle" style="background-color: #02b0e8;">
+                            <a class="m-0" href=""><i class="fa-brands fa-twitter"></i></a>
+                        </div>
+                        <div class="circle" style="background-color: aqua;">
+                            <a class="m-0" href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="circle" style="background-color: orangered;">
+                            <a class="m-0" href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                        <div class="circle" style="background-color: crimson;">
+                            <a class="m-0" href=""><i class="fa-brands fa-pinterest"></i></a>
+                        </div>
 
+                    </div>
                 </div>
-            </div>
-            <div class="col-3">
-                <h4>{{ store.footerLinks[1].titolo }}</h4>
-                <a class="d-block" v-for="links in store.footerLinks[1].links" style="line-height: 2.8rem;">{{ links }}</a>
-                <div>
-                    
-                </div>
-            </div>
-            <div class="col-3">
-                <h4>{{ store.footerLinks[2].titolo }}</h4>
-                <a class="d-block" v-for="links in store.footerLinks[2].links" style="line-height: 2.8rem;">{{ links }}</a>
-                <div>
-                    
-                </div>
-            </div>
-            <div class="col-3">
-                <h4>{{ store.footerLinks[3].titolo }}</h4>
-                <div v-for="element, i in store.footerLinks[3].recent" class="d-flex mb-5">
+                <div class="col-3">
+                    <h4>{{ store.footerLinks[1].titolo }}</h4>
+                    <a class="d-block" v-for="links in store.footerLinks[1].links" style="line-height: 2.8rem;">{{ links
+                        }}</a>
                     <div>
-                        <img class="recent-posts-img" :src="store.footerLinks[3].recent.img_link" alt="">
-                    </div>
-                    <div class="recent-post-desc">
-                        <div>
-                            <a href="">{{ element.name }}</a>
-                        </div>
-                        <div>
-                            <span>{{ element.date }}</span>
-                        </div>
+
                     </div>
                 </div>
-                <div>
-                    
+                <div class="col-3">
+                    <h4>{{ store.footerLinks[2].titolo }}</h4>
+                    <a class="d-block" v-for="links in store.footerLinks[2].links" style="line-height: 2.8rem;">{{ links
+                        }}</a>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="col-3">
+                    <h4>{{ store.footerLinks[3].titolo }}</h4>
+                    <div v-for="element, i in store.news.splice(0, 3)" class="d-flex mb-3">
+                        <img class="my-foot-w me-3" :src="getImage(element.img)" alt="">
+                        <div class="d-flex flex-column fs-6">
+                            <div class="mb-2"><a class="m-0" href="">{{ element.title }}</a></div>
+                            <div>{{ element.date }}</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</footer>
+    </footer>
 
-<!-- sezione del copyright -->
-<AppCopyright />
+    <!-- sezione del copyright -->
+    <AppCopyright />
 </template>
 
 <style scoped>
-*{
+* {
     color: white;
 }
 
-footer{
-    background-color: black;
+footer {
     padding: 3rem 0 1rem 0;
+    position: relative;
+}
+
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.2;
+    background: url(../assets/img/foot-bg.jpg);
+    z-index: -1;
+}
+
+
+
+
+.my-foot-w {
+    width: 104px;
+    height: 104px;
 }
 
 .recent-posts-img {
@@ -131,7 +147,7 @@ footer{
     margin-right: 0.8rem;
 }
 
-a{
+a {
     margin-right: 1.5rem;
     text-decoration: none;
 }
