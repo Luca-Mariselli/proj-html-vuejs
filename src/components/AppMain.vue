@@ -4,6 +4,7 @@ import Jumbo from './Jumbo.vue';
 import MoviePlaylist from './MoviePlaylist.vue';
 import JumboComing from './JumboComing.vue';
 import AppSubscribe from './AppSubscribe.vue';
+import MovieCategories from './MovieCategories.vue';
 
 
 export default {
@@ -11,6 +12,7 @@ export default {
         MoviePlaylist,
         Jumbo,
         JumboComing,
+        MovieCategories,
         AppSubscribe,
 
     },
@@ -36,6 +38,8 @@ export default {
         <MoviePlaylist />
 
         <JumboComing />
+
+        <MovieCategories />
 
         <AppSubscribe />
 

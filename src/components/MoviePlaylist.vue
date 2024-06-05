@@ -75,12 +75,6 @@ export default {
 </template>
 
 <style scoped>
-.my-movie-pl {
-    border-left: solid 2px #13BE13;
-    border-bottom: solid 1px #182028;
-    margin-bottom: 6rem;
-}
-
 .my-col-pl-left {
     width: 880px;
     max-height: 570px;
@@ -93,6 +87,7 @@ export default {
 
 .my-hov-pl:hover {
     background-color: gray;
+    color: #13e013;
 
 }
 

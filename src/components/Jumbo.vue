@@ -28,13 +28,7 @@ export default {
                 this.imgActive = 0
             }
         },
-        prevImg() {
-            if (this.imgActive == 0) {
-                this.imgActive = 1
-            } else {
-                this.imgActive = 0
-            }
-        },
+
     }
 }
 </script>
@@ -42,8 +36,8 @@ export default {
 <template>
     <div class="position-relative my-fs" @mouseover="showButton()" @mouseleave="hideButton()">
         <figure class="m-0 p-0">
-            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-if="this.imgActive == 0">
-            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-if="this.imgActive == 1">
+            <img src="../assets/img/slider.jpg" alt="" class="img-fluid" v-show="this.imgActive == 0">
+            <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid" v-show="this.imgActive == 1">
         </figure>
         <div class="text-center w-50 position-absolute">
             <h6 class="m-0">Welcome To Our Movie Site</h6>
@@ -58,7 +52,7 @@ export default {
         <button class="position-absolute rigth d-none bg-black" id="rigth" @click="nextImg()">
             <i class="fa-regular fa-circle-right"></i>
         </button>
-        <button class="position-absolute left d-none bg-black" id="left" @click="prevImg()">
+        <button class="position-absolute left d-none bg-black" id="left" @click="nextImg()">
             <i class="fa-regular fa-circle-left"></i>
         </button>
     </div>
