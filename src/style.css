@@ -1,6 +1,7 @@
 body{
   background-color: #060F19 !important; 
   color: white !important;
+  font-family: sans-serif;
 }
 
 /* width */
@@ -28,4 +29,8 @@ body{
   border-left: solid 2px #13BE13;
   border-bottom: solid 1px #182028;
   margin-bottom: 4rem;
+}
+
+.margin-section{
+  margin-bottom: 6rem;
 }

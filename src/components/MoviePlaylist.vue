@@ -25,7 +25,7 @@ export default {
 </script>
 
 <template>
-    <div class="container mt-3 ">
+    <div class="container margin-section ">
         <div class="my-movie-pl p-1">
             <h3 class="ms-2">Movie Playlist</h3>
             <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>

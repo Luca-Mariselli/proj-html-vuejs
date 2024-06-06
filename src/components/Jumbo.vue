@@ -50,7 +50,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative my-mb" @mouseover="showButton()" @mouseleave="hideButton()">
+    <div class="position-relative my-mb margin-section" @mouseover="showButton()" @mouseleave="hideButton()">
         <figure class="m-0 p-0 my-jumbo-h">
             <img src="../assets/img/slider.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 0">
             <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 1">
@@ -119,10 +119,6 @@ i.rigth {
 
 .my-fs {
     font-size: 16px;
-}
-
-.my-mb {
-    margin-bottom: 4rem;
 }
 
 .my-green {

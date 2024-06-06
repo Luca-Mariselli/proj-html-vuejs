@@ -48,7 +48,7 @@ export default {
 </script>
 
 <template>
-    <div class="position-relative mb-5">
+    <div class="position-relative margin-section">
         <div class="my-fs d-flex justify-content-left">
             <div class="w-50"></div>
             <div class="my-coming-w d-flex flex-column align-self-center text-center">

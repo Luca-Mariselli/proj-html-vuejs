@@ -13,8 +13,8 @@ export default {
         return {
             store,
             activeImg: 0,
-            myPrevImg: 8,
-            myNextImg: 1,
+            myprevImg: store.films.length - 1,
+            mynextImg: 1,
         }
     },
 
@@ -25,38 +25,56 @@ export default {
         // },
 
         nextImg() {
-            if (this.activeImg == 8) {
+            if (this.activeImg == store.films.length - 2) {
+                this.activeImg = store.films.length - 1
+                this.myprevImg = store.films.length - 2
+                this.mynextImg = 0
+
+            }
+            else if (this.activeImg == store.films.length - 1) {
                 this.activeImg = 0
-                console.log(store.films)
+                this.myprevImg = store.films.length - 1
+                this.mynextImg = 1
+
+            }
+            else if (this.activeImg == 0) {
+                this.activeImg++
+                this.mynextImg++
+                this.myprevImg = 0
+
             } else {
                 this.activeImg++
-                console.log(store.films)
-            }
-
-            if (this.activeImg == 0) {
-                this.myPrevImg = 8
-            } else {
-                this.myPrevImg = this.activeImg - 1
+                this.mynextImg++
+                this.myprevImg++
             }
         },
 
         prevImg() {
-            if (this.activeImg == 0) {
-                this.activeImg = 8
+            if (this.activeImg == store.films.length - 1) {
+                this.myprevImg = store.films.length - 3
+                this.activeImg = store.films.length - 2
+                this.mynextImg = store.films.length - 1
+
+
+            } else if (this.activeImg == 1) {
+                this.myprevImg = store.films.length - 1
+                this.activeImg = 0
+                this.mynextImg = 1
+
+
+            } else if (this.activeImg == 0) {
+                this.myprevImg = store.films.length - 2
+                this.activeImg = store.films.length - 1
+                this.mynextImg = 0
             } else {
                 this.activeImg--
-            }
+                this.mynextImg--
+                this.myprevImg--
 
-            if (this.activeImg == 8) {
-                this.myNextImg = 0
-            } else {
-                this.myNextImg = this.activeImg + 1
             }
         },
 
-        takePrevImg() {
 
-        }
     },
 
     mounted() {
@@ -67,7 +85,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container margin-section">
         <div class="row">
             <div class="col-12 d-flex justify-content-between">
                 <div class="my-movie-pl p-1">
@@ -75,21 +93,19 @@ export default {
                     <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
                 </div>
                 <div>
-                    <button @click="prevImg()">dietro</button>
-                    <button @click="nextImg()">avanti</button>
+                    <button @click="prevImg()"><i class="fa-solid fa-circle-chevron-left my-btn-fs"></i></button>
+                    <button @click="nextImg()"><i class="fa-solid fa-circle-chevron-right my-btn-fs"></i></button>
                 </div>
             </div>
             <div class="col-12">
-                <div class="carousel-container d-flex flex-wrap flex-column">
-                    <!-- <template v-for="movie, i in store.films">
-                        <AppSingleCardMovie v-show="this.myPrevImg == i"
-                            style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                        <AppSingleCardMovie v-show="this.activeImg == i"
-                            style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                        <AppSingleCardMovie v-show="this.myNextImg == i"
-                            style="height: 600px; width: calc(100% / 3); border-radius: 20px;" :card="movie" />
-                    </template> -->
-                    <AppSingleCardMovie v-for="movie, i in store.films" :card="movie" v-if="activeImg == i" />
+                <div class="carousel-container d-flex flex-wrap flex-column justify-content-center position-relative">
+
+                    <div class="test"></div>
+                    <div class="test2"></div>
+                    <AppSingleCardMovie class="side-card" :card="store.films[myprevImg]" />
+                    <AppSingleCardMovie class="middle-card" :card="store.films[activeImg]" />
+                    <AppSingleCardMovie class="side-card" :card="store.films[mynextImg]" />
+
                 </div>
             </div>
         </div>
@@ -101,10 +117,66 @@ export default {
     color: white;
 }
 
+.test {
+    width: calc(100% / 3);
+    height: 550px;
+    z-index: 100;
+    background: linear-gradient(321deg, rgba(6, 15, 25, 1) 0%, rgba(6, 15, 25, 1) 21%, rgba(0, 212, 255, 0) 100%);
+    position: absolute;
+    opacity: 1;
+
+}
+
+.test2 {
+    width: calc(100% / 3);
+    right: 0;
+    height: 550px;
+    z-index: 100;
+    background: linear-gradient(321deg, rgba(6, 15, 25, 1) 0%, rgba(6, 15, 25, 1) 21%, rgba(0, 212, 255, 0) 100%);
+
+    position: absolute;
+    opacity: 1;
+}
+
 .carousel-container {
     width: 100%;
     height: 660px;
-    border: 1px solid white;
-    overflow: hidden;
+}
+
+.middle-card {
+    width: calc(100% / 3);
+    height: 600px;
+    border-radius: 20px;
+    box-shadow: rgba(19, 190, 19, 0.4) 5px 5px, rgba(19, 190, 19, 0.3) 10px 10px, rgba(19, 190, 19, 0.2) 15px 15px, rgba(19, 190, 19, 0.1) 20px 20px, rgba(19, 190, 19, 0.05) 25px 25px;
+    z-index: 101;
+}
+
+.side-card {
+    width: calc(100% / 3);
+    height: 550px;
+    border-radius: 20px;
+    filter: opacity(0.5);
+}
+
+.fa-solid {
+    font-size: 2.5rem;
+}
+
+.fa-circle-chevron-left {
+    color: #13be13;
+}
+
+.fa-circle-chevron-right {
+    color: #13be13;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.my-btn-fs {
+    font-size: 28px;
+    margin-top: 1rem;
 }
 </style>

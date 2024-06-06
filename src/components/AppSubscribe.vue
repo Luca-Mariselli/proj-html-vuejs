@@ -15,7 +15,7 @@ export default {
     },
 
     methods: {
-      
+
     },
 
     mounted() {
@@ -30,7 +30,7 @@ export default {
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <div class="mx-5">
-                    <input type="text" placeholder="first Name">
+                    <input type="text" placeholder="First Name">
                 </div>
                 <div class="mx-5">
                     <input type="text" placeholder="Last Name">
@@ -47,7 +47,7 @@ export default {
 </template>
 
 <style scoped>
-*{
+* {
     color: white;
 }
 
@@ -56,16 +56,17 @@ export default {
     background-color: #13be13;
     padding: 5rem 0;
     border-radius: 20px;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     margin-top: 3rem;
 }
 
 input {
     background: none;
-    border: 1px solid white; 
+    border: 1px solid white;
     padding: 0.8rem 2.5rem;
     border-radius: 25px;
     margin-bottom: 5rem;
+    outline: none;
 }
 
 button {
