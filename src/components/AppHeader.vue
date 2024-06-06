@@ -16,7 +16,7 @@ export default {
 <template>
     <header>
         <!-- ICONE SOCIAL E LOGIN -->
-        <div class="container m-auto row m-0 justify-content-between py-3 px-0">
+        <div class="container m-auto row m-0 justify-content-between py-3 px-0" id="elemento">
             <div class="col-8 p-0">
                 <div class="row m-0">
                     <div class="col-12 p-0">

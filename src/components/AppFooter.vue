@@ -16,9 +16,9 @@ export default {
     },
 
     methods: {
-        getImage(percorso) {
-            return new URL(`../assets/img/${percorso}`, import.meta.url)
-        },
+        getImage: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        }
     },
 
     mounted() {
@@ -36,10 +36,9 @@ export default {
 
 </div> -->
     <!-- FOOTER -->
-    <footer class="grayscale">
+    <footer>
         <div class="container">
             <div class="row">
-                <!-- About Us e Social -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[0].titolo }}</h4>
                     <p>{{ store.footerLinks[0].description }}</p>
@@ -62,7 +61,6 @@ export default {
 
                     </div>
                 </div>
-                <!-- Movie Category -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[1].titolo }}</h4>
                     <a class="d-block" v-for="links in store.footerLinks[1].links" style="line-height: 2.8rem;">{{ links
@@ -71,7 +69,6 @@ export default {
 
                     </div>
                 </div>
-                <!-- Information -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[2].titolo }}</h4>
                     <a class="d-block" v-for="links in store.footerLinks[2].links" style="line-height: 2.8rem;">{{ links
@@ -80,10 +77,9 @@ export default {
 
                     </div>
                 </div>
-                <!-- Recent Posts -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[3].titolo }}</h4>
-                    <div v-for="element, i in store.news.splice(0, 3)" class="d-flex mb-3">
+                    <div v-for="element, i in store.newsClone.splice(0, 3)" class="d-flex mb-3">
                         <img class="my-foot-w me-3" :src="getImage(element.img)" alt="">
                         <div class="d-flex flex-column fs-6">
                             <div class="mb-2"><a class="m-0" href="">{{ element.title }}</a></div>
@@ -95,7 +91,7 @@ export default {
         </div>
     </footer>
 
-    <!-- Copyright -->
+    <!-- sezione del copyright -->
     <AppCopyright />
 </template>
 
@@ -104,9 +100,19 @@ export default {
     color: white;
 }
 
+.my-foot-w {
+    width: 104px;
+    height: 104px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
 footer {
-    padding: 3rem 0 1rem 0;
     position: relative;
+    padding: 3rem 0 1rem 0;
 }
 
 footer::before {
@@ -121,12 +127,7 @@ footer::before {
     z-index: -1;
 }
 
-.my-foot-w {
-    width: 104px;
-    height: 104px;
-}
-
-.recent-posts-img {
+.img-container {
     width: 80px;
     height: 80px;
     border: 1px solid white;
@@ -137,6 +138,7 @@ footer::before {
 }
 
 .circle {
+    /* border: 1px solid white; */
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -151,7 +153,6 @@ a {
     text-decoration: none;
 }
 
-/* Hover */
 a:hover {
     color: #13be13;
     transition: 450ms;
