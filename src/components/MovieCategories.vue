@@ -22,6 +22,7 @@ export default {
             return new URL(`../assets/img/${percorso}`, import.meta.url)
         },
 
+        // metodo (da perfezionare) per selezionare come attiva la categoria al click
         clickElement() {
             if (this.filter == ``) {
                 document.getElementById(`1`).classList.add(`my-clicked-add`);
@@ -70,12 +71,14 @@ export default {
 </script>
 
 <template>
-    <div class="container mt-3 margin-section">
+    <div class="container margin-section">
+        <!-- Intestazione Sezione -->
         <div class="my-movie-pl p-1">
             <h3 class="ms-2">Movie Categories</h3>
             <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
         </div>
 
+        <!-- Selettore categorie -->
         <div class="d-flex justify-content-around my-categories-flex-w mb-5 fs-5">
             <div id="1" @click="filter = ``, clickElement()">All</div>
             <div id="2" class="my-underline" @click="filter = `Coming Soon`, clickElement()">Coming Soon</div>
@@ -84,6 +87,7 @@ export default {
             <div id="5" class="my-underline" @click="filter = `TV Series`, clickElement()">TV Series</div>
         </div>
 
+        <!-- Stampo cards -->
         <div class="d-flex flex-wrap justify-content-left">
             <AppSingleCardMovie v-for="film, i in store.films" :card="film" class="my-card-flex-categories"
                 v-show="film.category == filter || filter == ``" />
@@ -116,7 +120,7 @@ export default {
 
 }
 
-
+/* Hover */
 .my-underline:hover {
     border-bottom: 2px #13BE13 solid;
     transition: all 0.4s ease-in-out;

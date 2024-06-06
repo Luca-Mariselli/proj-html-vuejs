@@ -4,6 +4,7 @@ import Jumbo from './Jumbo.vue';
 import MoviePlaylist from './MoviePlaylist.vue';
 import JumboComing from './JumboComing.vue';
 import AppSubscribe from './AppSubscribe.vue';
+import LatestNews from './LatestNews.vue';
 import MovieCategories from './MovieCategories.vue';
 import AppNewMovieCarousel from './AppNewMovieCarousel.vue';
 
@@ -14,6 +15,7 @@ export default {
         Jumbo,
         JumboComing,
         MovieCategories,
+        LatestNews,
         AppSubscribe,
         AppNewMovieCarousel,
 
@@ -46,7 +48,13 @@ export default {
 
         <MovieCategories />
 
+        <div class="margin-section">
+            <LatestNews />
+        </div>
+
         <AppSubscribe />
+
+
 
     </main>
 

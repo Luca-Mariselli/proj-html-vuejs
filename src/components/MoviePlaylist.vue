@@ -26,12 +26,14 @@ export default {
 
 <template>
     <div class="container margin-section ">
+        <!-- Intestazione Sezione -->
         <div class="my-movie-pl p-1">
             <h3 class="ms-2">Movie Playlist</h3>
             <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
         </div>
 
         <div class="d-flex mb-5">
+            <!-- Sezione embedding youtube  -->
             <div class="my-col-pl-left">
                 <div>
                     <iframe width="860" height="570" :src="store.films[videoAttivo].video" title="YouTube video player"
@@ -40,6 +42,8 @@ export default {
                         referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
             </div>
+
+            <!-- Sezione new movie contenente tutte le card -->
             <div class="my-col-pl-right d-flex flex-column">
                 <div class="p-3 mb-1 pl-bg">
                     <h5 class="fw-bold">New Movie</h5>
@@ -80,21 +84,6 @@ export default {
     max-height: 570px;
 }
 
-
-.my-hov-pl:hover {
-    background-color: rgba(128, 128, 128, 0.121);
-
-    /* .my-hov-title {
-        color: #13BE13;
-    } */
-}
-
-.my-hov-pl:hover .my-hov-title {
-    color: #13BE13;
-}
-
-
-
 .pl-bg {
     background-color: #182028;
 }
@@ -105,5 +94,18 @@ export default {
 
 .my-width-pl {
     width: 30%;
+}
+
+/* Hover */
+.my-hov-pl:hover {
+    background-color: rgba(128, 128, 128, 0.121);
+
+    /* .my-hov-title {
+        color: #13BE13;
+    } */
+}
+
+.my-hov-pl:hover .my-hov-title {
+    color: #13BE13;
 }
 </style>

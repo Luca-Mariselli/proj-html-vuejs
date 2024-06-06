@@ -15,6 +15,7 @@ export default {
     },
 
     methods: {
+        // metodi per far vedere e nascondere le frecce
         showButton() {
             document.getElementById("rigth").classList.remove("d-none")
             document.getElementById("left").classList.remove("d-none")
@@ -23,6 +24,8 @@ export default {
             document.getElementById("rigth").classList.add("d-none")
             document.getElementById("left").classList.add("d-none")
         },
+
+        // metodo per cambiare immagine visualizzata
         nextImg() {
             clearInterval(this.timer)
             if (this.imgActive == 0) {
@@ -33,6 +36,7 @@ export default {
             this.intervallo()
         },
 
+        // timer per cambiare immagine ogni 5s
         intervallo() {
             this.timer = setInterval(() => {
                 if (this.imgActive == 0) {
@@ -51,10 +55,13 @@ export default {
 
 <template>
     <div class="position-relative my-mb margin-section" @mouseover="showButton()" @mouseleave="hideButton()">
+        <!-- Immagini che scorrono -->
         <figure class="m-0 p-0 my-jumbo-h">
             <img src="../assets/img/slider.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 0">
             <img src="../assets/img/slider-2.jpg" alt="" class="img-fluid my-jumbo-h" v-show="this.imgActive == 1">
         </figure>
+
+        <!-- Box con testo -->
         <div class="text-center position-absolute">
             <div class="d-flex flex-column">
                 <h6>Welcome To Our Movie Site</h6>
@@ -66,10 +73,8 @@ export default {
             </div>
             <button class="my-rounded-button rounded-pill">Read More</button>
         </div>
-
+        <!-- Frecce dx/sx -->
         <i id="rigth" class="fa-solid fa-circle-chevron-right position-absolute rigth d-none" @click="nextImg()"></i>
-
-
         <i id="left" class="fa-solid fa-circle-chevron-left position-absolute left d-none" @click="nextImg()"></i>
 
     </div>
@@ -112,11 +117,6 @@ i.rigth {
     color: #13be135d;
 }
 
-.fa-circle-chevron-right:hover,
-.fa-circle-chevron-left:hover {
-    color: #13BE13;
-}
-
 .my-fs {
     font-size: 16px;
 }
@@ -141,5 +141,11 @@ i.rigth {
     background-color: #13BE13;
     color: white;
     font-weight: 500;
+}
+
+/* Hover */
+.fa-circle-chevron-right:hover,
+.fa-circle-chevron-left:hover {
+    color: #13BE13;
 }
 </style>

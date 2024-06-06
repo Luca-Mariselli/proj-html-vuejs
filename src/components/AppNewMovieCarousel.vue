@@ -19,11 +19,7 @@ export default {
     },
 
     methods: {
-        // getActiveImg() {
-        //     this.activeImg = index
-        //     console.log(this.activeImg)
-        // },
-
+        // metodi per cambiare immagine con frecce next e prev
         nextImg() {
             if (this.activeImg == store.films.length - 2) {
                 this.activeImg = store.films.length - 1
@@ -87,11 +83,13 @@ export default {
 <template>
     <div class="container margin-section">
         <div class="row">
-            <div class="col-12 d-flex justify-content-between">
+            <div class="col-12 d-flex justify-content-between my-border-bottom">
+                <!-- Intestazione sezione -->
                 <div class="my-movie-pl p-1">
                     <h3 class="ms-2">New Movie</h3>
                     <div class="ms-2">Lorem Ipsum is simply dummy text of the printing and typesettin</div>
                 </div>
+                <!-- Contenitore bottoni -->
                 <div>
                     <button @click="prevImg()"><i class="fa-solid fa-circle-chevron-left my-btn-fs"></i></button>
                     <button @click="nextImg()"><i class="fa-solid fa-circle-chevron-right my-btn-fs"></i></button>
@@ -99,13 +97,13 @@ export default {
             </div>
             <div class="col-12">
                 <div class="carousel-container d-flex flex-wrap flex-column justify-content-center position-relative">
-
-                    <div class="test"></div>
-                    <div class="test2"></div>
+                    <!-- Div per oscurare elementi dx/sx del carosello -->
+                    <div class="my-opacity-l"></div>
+                    <div class="my-opacity-r"></div>
+                    <!-- Carosello a 3 elementi -->
                     <AppSingleCardMovie class="side-card" :card="store.films[myprevImg]" />
                     <AppSingleCardMovie class="middle-card" :card="store.films[activeImg]" />
                     <AppSingleCardMovie class="side-card" :card="store.films[mynextImg]" />
-
                 </div>
             </div>
         </div>
@@ -117,7 +115,7 @@ export default {
     color: white;
 }
 
-.test {
+.my-opacity-l {
     width: calc(100% / 3);
     height: 550px;
     z-index: 100;
@@ -127,7 +125,8 @@ export default {
 
 }
 
-.test2 {
+
+.my-opacity-r {
     width: calc(100% / 3);
     right: 0;
     height: 550px;

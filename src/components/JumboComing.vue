@@ -59,6 +59,7 @@ export default {
                     <span class="my-green">&</span>
                     EMILY ROSE
                 </span>
+                <!-- Countdown -->
                 <div class="d-flex justify-content-center" id="demo">
                     <div class="d-flex flex-column m-1">
                         <div class="my-coming-bg my-green my-coming-sq" id="days"></div>
@@ -77,11 +78,6 @@ export default {
                         <div class=" my-yellow">Seconds</div>
                     </div>
                 </div>
-
-
-
-
-
             </div>
         </div>
     </div>

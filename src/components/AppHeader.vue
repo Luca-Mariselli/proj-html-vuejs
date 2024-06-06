@@ -16,9 +16,9 @@ export default {
 <template>
     <header>
         <!-- ICONE SOCIAL E LOGIN -->
-        <div class="container m-auto row m-0 justify-content-between py-3">
+        <div class="container m-auto row m-0 justify-content-between py-3 px-0">
             <div class="col-8 p-0">
-                <div class="row">
+                <div class="row m-0">
                     <div class="col-12 p-0">
                         <i class="fa-regular fa-envelope me-1"></i>
                         <span class="me-1">Superhit Top Movie:</span>
@@ -58,7 +58,7 @@ export default {
             </div>
             <div class="col-6 p-0">
                 <div class="row m-0 justify-content-end">
-                    <div class="col-8 p-0">
+                    <div class="col-10 p-0">
                         <div class="input-group mb-3">
                             <button class="btn dropdown-toggle my-border" type="button" data-bs-toggle="dropdown"
                                 aria-expanded="false">All Movie</button>
@@ -69,20 +69,20 @@ export default {
                             </ul>
                             <input type="text" class="form-control my-border my-searchbar"
                                 aria-label="Text input with dropdown button" placeholder="Search...." />
+                            <button class="py-2 my-button">Search</button>
                         </div>
+
                     </div>
-                    <div class="col-1 p-0">
-                        <button class="py-2 my-button">Search</button>
-                    </div>
+
                 </div>
             </div>
         </div>
 
         <hr class="m-0">
+
         <!-- LINK CON MENU A TENDINA -->
         <div class="container d-flex justify-content-between py-4 px-0 linkbar">
             <div class="p-0 d-flex my-head-flex-w">
-
                 <template v-for="link in store.headerLinks">
                     <button class="btn dropdown-toggle p-0 text-start me-4" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
@@ -115,12 +115,6 @@ a {
     font-weight: 500;
     font-size: 18px;
 }
-
-a:hover {
-    color: #13BE13;
-    transition: 1s;
-}
-
 
 button {
     color: white;
@@ -166,17 +160,24 @@ ul {
     border-radius: 0%;
 }
 
+.my-head-flex-w {
+    width: 60%;
+    justify-content: left;
+}
+
+
+/* Hover, focus, placeholder */
+a:hover {
+    color: #13BE13;
+    transition: 1s;
+}
+
 .my-border:hover {
     border-left: 1px solid rgba(162, 159, 159, 0.3);
     border-bottom: 1px solid rgba(162, 159, 159, 0.3);
     border-top: 1px solid rgba(162, 159, 159, 0.3);
     color: #13be1397;
     transition: 1s;
-}
-
-.my-head-flex-w {
-    width: 60%;
-    justify-content: left;
 }
 
 .linkbar button:hover {

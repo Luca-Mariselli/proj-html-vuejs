@@ -26,7 +26,7 @@ export default {
 </script>
 
 <template>
-    <div class="container">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-12 d-flex justify-content-center">
                 <div class="mx-5">
@@ -55,7 +55,7 @@ export default {
     width: 100%;
     background-color: #13be13;
     padding: 5rem 0;
-    border-radius: 20px;
+    border-radius: 40px;
     margin-bottom: 6rem;
     margin-top: 3rem;
 }
@@ -75,6 +75,7 @@ button {
     border-radius: 25px;
     box-shadow: none;
     border-style: solid;
+    font-weight: 600;
 }
 
 ::placeholder {

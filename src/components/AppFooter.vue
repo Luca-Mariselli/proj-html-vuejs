@@ -39,6 +39,7 @@ export default {
     <footer class="grayscale">
         <div class="container">
             <div class="row">
+                <!-- About Us e Social -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[0].titolo }}</h4>
                     <p>{{ store.footerLinks[0].description }}</p>
@@ -61,6 +62,7 @@ export default {
 
                     </div>
                 </div>
+                <!-- Movie Category -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[1].titolo }}</h4>
                     <a class="d-block" v-for="links in store.footerLinks[1].links" style="line-height: 2.8rem;">{{ links
@@ -69,6 +71,7 @@ export default {
 
                     </div>
                 </div>
+                <!-- Information -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[2].titolo }}</h4>
                     <a class="d-block" v-for="links in store.footerLinks[2].links" style="line-height: 2.8rem;">{{ links
@@ -77,6 +80,7 @@ export default {
 
                     </div>
                 </div>
+                <!-- Recent Posts -->
                 <div class="col-3">
                     <h4>{{ store.footerLinks[3].titolo }}</h4>
                     <div v-for="element, i in store.news.splice(0, 3)" class="d-flex mb-3">
@@ -91,7 +95,7 @@ export default {
         </div>
     </footer>
 
-    <!-- sezione del copyright -->
+    <!-- Copyright -->
     <AppCopyright />
 </template>
 
@@ -105,7 +109,6 @@ footer {
     position: relative;
 }
 
-
 footer::before {
     content: "";
     position: absolute;
@@ -117,9 +120,6 @@ footer::before {
     background: url(../assets/img/foot-bg.jpg);
     z-index: -1;
 }
-
-
-
 
 .my-foot-w {
     width: 104px;
@@ -137,7 +137,6 @@ footer::before {
 }
 
 .circle {
-    /* border: 1px solid white; */
     border-radius: 50%;
     width: 35px;
     height: 35px;
@@ -152,6 +151,7 @@ a {
     text-decoration: none;
 }
 
+/* Hover */
 a:hover {
     color: #13be13;
     transition: 450ms;
