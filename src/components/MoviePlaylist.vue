@@ -12,17 +12,12 @@ export default {
         return {
             store,
             videoAttivo: 0,
-            // slideAttiva: 0,
         }
     },
     methods: {
         getImage(percorso) {
             return new URL(`../assets/img/${percorso}`, import.meta.url)
         },
-
-        // changeMovie(index) {
-        //     this.videoAttivo == index
-        // }
     },
     mounted() {
     }
@@ -55,7 +50,7 @@ export default {
                         v-for="film, i in store.films">
                         <img class="my-width-pl" :src="getImage(film.img_sq)" alt="">
                         <div class="ms-3 w-100">
-                            <div class="fw-bold fs-5 mb-1">{{ film.title }}</div>
+                            <div class="fw-bold fs-5 mb-1 my-hov-title">{{ film.title }}</div>
                             <div class="fw-semibold fs-6 mb-1">{{ film.views }} Views</div>
                             <div class="d-flex justify-content-between">
                                 <div>{{ film.release }}</div>
@@ -85,11 +80,19 @@ export default {
     max-height: 570px;
 }
 
-.my-hov-pl:hover {
-    background-color: gray;
-    color: #13e013;
 
+.my-hov-pl:hover {
+    background-color: rgba(128, 128, 128, 0.121);
+
+    /* .my-hov-title {
+        color: #13BE13;
+    } */
 }
+
+.my-hov-pl:hover .my-hov-title {
+    color: #13BE13;
+}
+
 
 
 .pl-bg {
